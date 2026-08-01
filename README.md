@@ -2,9 +2,9 @@
 
 # 🎯 claude-statusline-burnrate
 
-**A Claude Code status line that does the weekly-limit math for you.**
+**Stop opening `/usage`. It's all right there, on every render.**
 
-Real server-side usage · today's share of the week · the burn rate you can sustain · sleep-aware pacing
+A status line that does the weekly-limit math for you: real server-side usage · today's share of the week · the burn rate you can sustain · sleep-aware pacing
 
 ![bash](https://img.shields.io/badge/bash-3.2%2B-4EAA25?logo=gnubash&logoColor=white)
 ![deps](https://img.shields.io/badge/deps-just%20jq-blue)
@@ -15,7 +15,9 @@ Real server-side usage · today's share of the week · the burn rate you can sus
 
 </div>
 
-No estimates, no background daemons, no node. Claude Code v2.1+ pipes the real `rate_limits` numbers into every status line render — the same ones `/usage` shows — and this script turns them into the answer you actually want: **am I ok, and how hard can I push?**
+You know the ritual: pause work, open `/usage`, squint at the weekly bar, guess whether you'll make it to the reset. This replaces it. Claude Code v2.1+ pipes the real `rate_limits` numbers into every status line render — the same ones `/usage` shows — and this script keeps them at the bottom of your terminal, turned into the answer you actually want: **am I ok, and how hard can I push?** No estimates, no background daemons, no node.
+
+If it saves you a rate-limit surprise, a ⭐ helps other people find it.
 
 ## 🧭 Anatomy
 
