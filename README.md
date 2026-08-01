@@ -1,4 +1,4 @@
-# claude-quota-cat
+# claude-statusline-burnrate
 
 A Claude Code status line that does the weekly-limit math for you: the real server-side %, how much of today's share of the week is left, the burn rate you can sustain to reach the reset, and whether you're ahead or behind the line — every meter color-coded green → red as it climbs. There's also a cat.
 
@@ -27,7 +27,7 @@ No estimates, no background daemons, no node. Pure bash + jq reading the JSON Cl
 Needs `jq` and Claude Code v2.1+ (older versions don't expose `rate_limits`).
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/Gui-Gou/claude-quota-cat/main/statusline.sh -o ~/.claude/statusline.sh
+curl -fsSL https://raw.githubusercontent.com/Gui-Gou/claude-statusline-burnrate/main/statusline.sh -o ~/.claude/statusline.sh
 chmod +x ~/.claude/statusline.sh
 ```
 
@@ -44,7 +44,7 @@ Open a new session and the line shows up at the bottom. That's it.
 ## Try it without installing
 
 ```bash
-git clone https://github.com/Gui-Gou/claude-quota-cat && cd claude-quota-cat
+git clone https://github.com/Gui-Gou/claude-statusline-burnrate && cd claude-statusline-burnrate
 ./demo.sh          # four moods, fake data
 ./demo.sh --live   # animated — watch the cat and the rainbow drift
 ```

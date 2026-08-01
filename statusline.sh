@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
-# claude-quota-cat — a Claude Code status line with a cat that panics when you
-# burn your weekly limit too fast.
+# claude-statusline-burnrate — a Claude Code status line that does the
+# weekly-limit math: real rate_limits data, today's share of the week,
+# sustainable burn rate, sleep-aware pacing. Every meter color-coded.
 #
 # Renders:  🦄 Model effort │ 🎯 wk% today%t pace%/d trend │ 🧠 ctx% +add/-rem │ 🔥 5h% reset │ pet
 #   🦄/🎭/🪶/🌸 = model mascot: Fable unicorn, Opus theater, Sonnet quill, Haiku blossom
