@@ -1,6 +1,6 @@
 # claude-quota-cat
 
-A Claude Code status line with a cat that panics when you burn your weekly limit too fast.
+A Claude Code status line that does the weekly-limit math for you: the real server-side %, how much of today's share of the week is left, the burn rate you can sustain to reach the reset, and whether you're ahead or behind the line — every meter color-coded green → red as it climbs. There's also a cat.
 
 ![screenshot](assets/screenshot.png)
 
@@ -11,8 +11,9 @@ One line, five groups:
    model+effort    weekly budget            this session       5h window     cat
 ```
 
-- **Model** gets its own drifting rainbow and mascot (🎭 Opus, 🪶 Sonnet, 🦄 Fable, 🌸 Haiku). Effort level colored cool→hot.
 - **🎯 weekly** is the real server-side number from `rate_limits.seven_day`, not an estimate. Next to it: how much of *today's* slice of the week you have left (`%t`), the burn rate you can sustain to make it to the reset (`%/d`), and whether you're ahead or behind the even-burn line (`▲`/`▼`/`✓`).
+- **Every meter is color-coded on its own thresholds** — green → yellow → orange → red as it climbs — so peripheral vision does the monitoring; you only read the numbers once something warms up.
+- **Model** gets its own drifting rainbow and mascot (🎭 Opus, 🪶 Sonnet, 🦄 Fable, 🌸 Haiku). Effort level colored cool→hot.
 - **🧠 context** — how full this chat's window is, plus lines added/removed this session.
 - **🔥 5h window** — real usage and time until it resets.
 - **The cat** reacts to the worst of the three meters. Purring below 30%, sweating at 50%, on fire at 70%. It animates while Claude streams and rests when idle.
