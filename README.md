@@ -22,7 +22,7 @@ No estimates, no background daemons, no node. Claude Code v2.1+ pipes the real `
 | | Group | Example | What it tells you |
 |---|---|---|---|
 | 🦄 | Model | `Fable 5 high` | Model name in its own drifting rainbow + effort level, colored cool → hot |
-| 🎯 | Weekly budget | `32% 72%t 17%/d ▼-11` | The whole point of this repo — [next section](#-the-weekly-group) |
+| 🎯 | Weekly budget | `32% 72%t 17%/d ▼-11` | The whole point of this repo — see the next section |
 | 🧠 | This session | `10% +503/-16` | Context window fill + lines added/removed |
 | 🔥 | 5h window | `1% 4h54m` | Real 5-hour usage + time until it resets |
 | 😼 | Mood | `😼…` | Animated companion, reacts to the worst meter |
@@ -40,7 +40,7 @@ Reading `🎯 32% 72%t 17%/d ▼-11` left to right:
 | `17%/d` | pace | The burn rate you can sustain from this exact moment and still reach the weekly reset. A fresh week starts at `14.3` |
 | `▼-11` | trend | Points under (`▼` cyan — push harder) or over (`▲` red — you'll cap early) the even-burn line. `✓` = within ±3 |
 
-The math has one opinion baked in: **you sleep.** The even-burn line is drawn over awake hours only, so the trend doesn't quietly fall "behind" every night while you're not using it. Days flip at 2am, the first 6 hours are sleep — both [configurable](#%EF%B8%8F-configuration).
+The math has one opinion baked in: **you sleep.** The even-burn line is drawn over awake hours only, so the trend doesn't quietly fall "behind" every night while you're not using it. Days flip at 2am, the first 6 hours are sleep — both configurable (Configuration, below).
 
 Bonus nerdery: the payload's weekly % is an integer, so a small self-calibrating interpolator smooths `%t` between ticks using this session's live cost. Details in the comments of [statusline.sh](statusline.sh).
 
