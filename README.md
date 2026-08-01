@@ -21,7 +21,7 @@ If it saves you a rate-limit surprise, a ⭐ helps other people find it.
 
 ## 🧭 Anatomy
 
-![every stat explained](assets/infographic.png)
+![every stat explained](assets/infographic-clean.png)
 
 | | Group | Example | What it tells you |
 |---|---|---|---|
