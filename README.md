@@ -21,12 +21,24 @@ The pacing math counts awake hours, so the trend doesn't fall "behind" every nig
 
 Needs `jq` and Claude Code v2.1+.
 
+**Easiest** — you already have an AI open. Paste this into Claude Code:
+
+```text
+Install the status line from github.com/Gui-Gou/claude-statusline-burnrate: download
+https://raw.githubusercontent.com/Gui-Gou/claude-statusline-burnrate/main/statusline.sh
+to ~/.claude/statusline.sh, chmod +x it, then set statusLine to
+{"type":"command","command":"~/.claude/statusline.sh"} in ~/.claude/settings.json
+without touching my other settings.
+```
+
+**By hand** — two commands:
+
 ```bash
 curl -fsSL https://raw.githubusercontent.com/Gui-Gou/claude-statusline-burnrate/main/statusline.sh -o ~/.claude/statusline.sh
 chmod +x ~/.claude/statusline.sh
 ```
 
-Add to `~/.claude/settings.json`:
+Then add to `~/.claude/settings.json`:
 
 ```json
 {
