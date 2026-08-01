@@ -19,6 +19,8 @@ No estimates, no background daemons, no node. Claude Code v2.1+ pipes the real `
 
 ## 🧭 Anatomy
 
+![every stat explained](assets/infographic.png)
+
 | | Group | Example | What it tells you |
 |---|---|---|---|
 | 🦄 | Model | `Fable 5 high` | Model name in its own drifting rainbow + effort level, colored cool → hot |
